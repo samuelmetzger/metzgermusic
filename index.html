@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header site-header--overlay">
   <div class="nav-wrap">
     <a class="brand" href="index.html"><img src="images/Logo%20October%202025%20Website.jpg" alt="MetzgerMusic"></a>
     <nav class="main-nav">
@@ -26,7 +26,7 @@
 
 <div class="hero">
   <img src="images/Samuel%208-14-22.jpeg" alt="Samuel Metzger seated at the organ console">
-  <p class="tagline">Concert Organist &middot; Director of Music, Covenant Presbyterian Church, Nashville</p>
+  <p class="tagline">Church Musician<br>Concert Organist<br>Nashville</p>
 </div>
 
 <main>
@@ -58,6 +58,19 @@
   </div>
   <p>&copy; Samuel Metzger &middot; metzgermusic.com</p>
 </footer>
+
+<script>
+  // Overlay header turns solid once the page is scrolled past the hero top
+  (function () {
+    var header = document.querySelector('.site-header--overlay');
+    if (!header) return;
+    var onScroll = function () {
+      header.classList.toggle('is-solid', window.scrollY > 40);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
 
 </body>
 </html>

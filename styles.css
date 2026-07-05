@@ -31,7 +31,26 @@ header.site-header {
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  border-bottom: 2px solid var(--gold);
+  transition: background .35s ease, box-shadow .35s ease;
 }
+
+/* Home page: header floats transparently over the hero, then turns solid on scroll */
+header.site-header--overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: transparent;
+  box-shadow: none;
+  border-bottom-color: transparent;
+}
+header.site-header--overlay.is-solid {
+  background: var(--navy);
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  border-bottom-color: var(--gold);
+}
+/* push the hero down so the fixed overlay header doesn't cover it */
+.site-header--overlay + .hero { padding-top: 6rem; }
 
 .nav-wrap {
   max-width: 1080px;
@@ -102,12 +121,13 @@ nav.main-nav a.active { color: var(--gold-light); border-bottom-color: var(--gol
 }
 
 .hero .tagline {
-  color: #c9d2e0;
+  color: var(--gold-light);
   margin-top: 1.5rem;
-  font-size: 1.15rem;
-  font-style: italic;
+  font-size: 1.6rem;
+  line-height: 1.5;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  letter-spacing: .5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /* ---------- Page title band (interior pages) ---------- */
@@ -117,7 +137,7 @@ nav.main-nav a.active { color: var(--gold-light); border-bottom-color: var(--gol
   text-align: center;
 }
 .page-band h1 {
-  color: var(--white);
+  color: var(--gold-light);
   font-size: 2.6rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -190,6 +210,9 @@ a:hover { color: var(--navy); }
   color: var(--navy);
   font-weight: 600;
   margin-bottom: .5rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
 }
 
 .album .tracks { color: var(--ink); font-size: .98rem; }
@@ -203,11 +226,12 @@ a:hover { color: var(--navy); }
   color: var(--white);
   text-decoration: none;
   padding: .55rem 1.4rem;
+  border: 1px solid var(--gold);
   border-radius: 3px;
   font-size: .92rem;
   letter-spacing: .8px;
   text-transform: uppercase;
-  transition: background .2s;
+  transition: background .2s, color .2s;
 }
 .btn:hover { background: var(--gold); color: var(--navy-deep); }
 .btn.gold { background: var(--gold); color: var(--navy-deep); }
