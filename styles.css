@@ -56,9 +56,11 @@ header.site-header {
 }
 .brand span { color: var(--gold-light); }
 .brand img {
-  height: 46px;
+  height: 74px;
   display: block;
-  border-radius: 4px;
+  /* blend the logo's navy background into the header so only the white script shows */
+  mix-blend-mode: screen;
+  filter: contrast(1.6);
 }
 
 nav.main-nav { display: flex; gap: .25rem; flex-wrap: wrap; }
