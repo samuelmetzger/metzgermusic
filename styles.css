@@ -64,27 +64,15 @@ header.site-header--overlay.is-solid {
 }
 
 .brand {
-  color: var(--white);
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: .5px;
   text-decoration: none;
-  display: block;
-  width: 270px;
-  height: 64px;
-  overflow: hidden;
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 .brand span { color: var(--gold-light); }
 .brand img {
-  /* crop to the lettering; 'lighten' drops the logo's navy background into the
-     navy header so only the white script shows — no visible box in any state */
-  position: absolute;
-  width: 300px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: lighten;
+  height: 56px;
+  width: auto;
+  display: block;
 }
 
 nav.main-nav { display: flex; gap: .25rem; flex-wrap: wrap; }
