@@ -50,18 +50,23 @@ header.site-header {
   font-weight: 600;
   letter-spacing: .5px;
   text-decoration: none;
-  padding: .5rem 0;
-  display: flex;
-  align-items: center;
+  display: block;
+  width: 270px;
+  height: 64px;
+  overflow: hidden;
+  position: relative;
 }
 .brand span { color: var(--gold-light); }
 .brand img {
-  height: 110px;
-  margin: -18px 0;
-  display: block;
-  /* blend the logo's navy background into the header so only the white script shows */
+  /* crop to the lettering and blend the logo's navy background into the header
+     so only the white script shows */
+  position: absolute;
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   mix-blend-mode: screen;
-  filter: contrast(1.6);
+  filter: contrast(2);
 }
 
 nav.main-nav { display: flex; gap: .25rem; flex-wrap: wrap; }
