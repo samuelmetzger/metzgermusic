@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Samuel Metzger — MetzgerMusic</title>
+<meta name="description" content="Contact concert organist Samuel Metzger — bookings, recordings, and sheet music orders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html"><img src="images/logo.jpg" alt="MetzgerMusic"></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="recordings.html">Recordings</a>
+      <a href="sheet-music.html">Sheet Music</a>
+      <a href="organ-concerts.html">Organ Concerts</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-band">
+  <h1>Contact</h1>
+  <div class="rule"></div>
+</div>
+
+<main>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Contact Samuel</h3>
+      <p>For bookings, orders, or any other inquiry:</p>
+      <p class="email-big"><a href="mailto:samuel@metzgermusic.com">samuel@metzgermusic.com</a></p>
+      <form id="contact-form">
+        <label for="cf-name">Name</label>
+        <input id="cf-name" type="text" required>
+        <label for="cf-email">Your email</label>
+        <input id="cf-email" type="email" required>
+        <label for="cf-msg">Message</label>
+        <textarea id="cf-msg" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p style="font-size:.85rem;color:#6b7180;margin-top:.75rem;">The Send button opens your email app with the message pre-filled.</p>
+    </div>
+
+    <div>
+      <section>
+        <h2 class="section-title">Recordings — Download</h2>
+        <div class="section-rule"></div>
+        <p>Files are sent as MP3 and full resolution via download link.</p>
+        <ul class="price-list">
+          <li>Joy to the World! <span class="price">$15</span></li>
+          <li>Toccata! <span class="price">$15</span></li>
+          <li>Prayer and Meditation <span class="price">$15</span></li>
+          <li>Be Still My Soul <span class="price">$15</span></li>
+          <li>Majesty and Glory <span class="price">$15</span></li>
+          <li>King of Instruments <span class="price">$15</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title">Sheet Music</h2>
+        <div class="section-rule"></div>
+        <p>Samuel has several publications with MorningStar Music — <a href="https://www.morningstarmusic.com/composers/m/samuel-metzger.html">please visit here</a>.</p>
+        <ul class="price-list">
+          <li>Transcriptions for the Symphonic Organ, Vol. 1 (PDF) <span class="price">$15</span></li>
+          <li>Transcriptions for the Symphonic Organ, Vol. 2 (PDF) <span class="price">$15</span></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="social">
+    <a href="https://www.youtube.com/user/MetzgerMusic">YouTube</a>
+    <a href="https://www.facebook.com/metzgermusic">Facebook</a>
+    <a href="https://twitter.com/smetzger72">Twitter</a>
+    <a href="mailto:samuel@metzgermusic.com">Email</a>
+  </div>
+  <p>&copy; Samuel Metzger &middot; metzgermusic.com</p>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var name = document.getElementById('cf-name').value;
+  var email = document.getElementById('cf-email').value;
+  var msg = document.getElementById('cf-msg').value;
+  var body = msg + '\n\n— ' + name + ' (' + email + ')';
+  location.href = 'mailto:samuel@metzgermusic.com?subject=' +
+    encodeURIComponent('Website inquiry from ' + name) +
+    '&body=' + encodeURIComponent(body);
+});
+</script>
+
+</body>
+</html>
