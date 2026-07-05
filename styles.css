@@ -77,15 +77,14 @@ header.site-header--overlay.is-solid {
 }
 .brand span { color: var(--gold-light); }
 .brand img {
-  /* crop to the lettering and blend the logo's navy background into the header
-     so only the white script shows */
+  /* crop to the lettering; 'lighten' drops the logo's navy background into the
+     navy header so only the white script shows — no visible box in any state */
   position: absolute;
   width: 300px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  mix-blend-mode: screen;
-  filter: contrast(2);
+  mix-blend-mode: lighten;
 }
 
 nav.main-nav { display: flex; gap: .25rem; flex-wrap: wrap; }
