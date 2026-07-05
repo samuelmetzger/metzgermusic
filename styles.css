@@ -110,11 +110,10 @@ nav.main-nav a.active { color: var(--gold-light); border-bottom-color: var(--gol
 .hero .tagline {
   color: var(--gold-light);
   margin-top: 1.5rem;
-  font-size: 1.9rem;
+  font-size: 1.25rem;
   line-height: 1.4;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .hero .tagline .dot { color: var(--gold); margin: 0 .35rem; }
 
