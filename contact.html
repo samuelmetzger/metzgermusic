@@ -35,16 +35,17 @@
       <h3>Contact Samuel</h3>
       <p>For bookings, orders, or any other inquiry:</p>
       <p class="email-big"><a href="mailto:samuel@metzgermusic.com">samuel@metzgermusic.com</a></p>
-      <form id="contact-form">
+      <form id="contact-form" action="https://formspree.io/f/meebnvya" method="POST">
         <label for="cf-name">Name</label>
-        <input id="cf-name" type="text" required>
+        <input id="cf-name" name="name" type="text" required>
         <label for="cf-email">Your email</label>
-        <input id="cf-email" type="email" required>
+        <input id="cf-email" name="email" type="email" required>
         <label for="cf-msg">Message</label>
-        <textarea id="cf-msg" required></textarea>
+        <textarea id="cf-msg" name="message" required></textarea>
+        <input type="hidden" name="_subject" value="New inquiry from metzgermusic.com">
         <button type="submit">Send</button>
       </form>
-      <p style="font-size:.85rem;color:#6b7180;margin-top:.75rem;">The Send button opens your email app with the message pre-filled.</p>
+      <p id="cf-status" style="font-size:.9rem;color:#6b7180;margin-top:.75rem;"></p>
     </div>
 
     <div>
@@ -86,15 +87,30 @@
 </footer>
 
 <script>
-document.getElementById('contact-form').addEventListener('submit', function (e) {
+var form = document.getElementById('contact-form');
+var status = document.getElementById('cf-status');
+form.addEventListener('submit', async function (e) {
   e.preventDefault();
-  var name = document.getElementById('cf-name').value;
-  var email = document.getElementById('cf-email').value;
-  var msg = document.getElementById('cf-msg').value;
-  var body = msg + '\n\n— ' + name + ' (' + email + ')';
-  location.href = 'mailto:samuel@metzgermusic.com?subject=' +
-    encodeURIComponent('Website inquiry from ' + name) +
-    '&body=' + encodeURIComponent(body);
+  status.style.color = '#6b7180';
+  status.textContent = 'Sending…';
+  try {
+    var res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.reset();
+      status.style.color = '#2e6b2e';
+      status.textContent = 'Thank you — your message has been sent. Samuel will be in touch soon.';
+    } else {
+      status.style.color = '#a33';
+      status.textContent = 'Sorry, something went wrong. Please email samuel@metzgermusic.com directly.';
+    }
+  } catch (err) {
+    status.style.color = '#a33';
+    status.textContent = 'Sorry, something went wrong. Please email samuel@metzgermusic.com directly.';
+  }
 });
 </script>
 
