@@ -87,29 +87,29 @@
 </footer>
 
 <script>
-var form = document.getElementById('contact-form');
-var status = document.getElementById('cf-status');
-form.addEventListener('submit', async function (e) {
+var contactForm = document.getElementById('contact-form');
+var statusEl = document.getElementById('cf-status');
+contactForm.addEventListener('submit', async function (e) {
   e.preventDefault();
-  status.style.color = '#6b7180';
-  status.textContent = 'Sending…';
+  statusEl.style.color = '#6b7180';
+  statusEl.textContent = 'Sending…';
   try {
-    var res = await fetch(form.action, {
+    var res = await fetch(contactForm.action, {
       method: 'POST',
-      body: new FormData(form),
+      body: new FormData(contactForm),
       headers: { 'Accept': 'application/json' }
     });
     if (res.ok) {
-      form.reset();
-      status.style.color = '#2e6b2e';
-      status.textContent = 'Thank you — your message has been sent. Samuel will be in touch soon.';
+      contactForm.reset();
+      statusEl.style.color = '#2e6b2e';
+      statusEl.textContent = 'Thank you — your message has been sent. Samuel will be in touch soon.';
     } else {
-      status.style.color = '#a33';
-      status.textContent = 'Sorry, something went wrong. Please email samuel@metzgermusic.com directly.';
+      statusEl.style.color = '#a33';
+      statusEl.textContent = 'Sorry, something went wrong. Please email samuel@metzgermusic.com directly.';
     }
   } catch (err) {
-    status.style.color = '#a33';
-    status.textContent = 'Sorry, something went wrong. Please email samuel@metzgermusic.com directly.';
+    statusEl.style.color = '#a33';
+    statusEl.textContent = 'Sorry, something went wrong. Please email samuel@metzgermusic.com directly.';
   }
 });
 </script>
