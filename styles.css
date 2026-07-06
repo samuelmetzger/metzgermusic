@@ -68,11 +68,12 @@ header.site-header--overlay.is-solid {
   display: flex;
   align-items: center;
 }
-.brand span { color: var(--gold-light); }
-.brand img {
-  height: 56px;
+.brand-logo {
+  height: 50px;
   width: auto;
   display: block;
+  /* use the Cormorant font the page already loads so the logo is crisp and on-brand */
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
 }
 
 nav.main-nav { display: flex; gap: .25rem; flex-wrap: wrap; }
