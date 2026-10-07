@@ -11,6 +11,26 @@
     revealed.forEach(function (el) { el.classList.add('in'); });
   }
 
+  // Home tagline: hide the middle dot whenever the line wraps, so no line starts or ends with "·"
+  var kicker = document.querySelector('.hero .kicker');
+  if (kicker) {
+    var parts = kicker.querySelectorAll('.kp');
+    var sep = kicker.querySelector('.ks');
+    var fitKicker = function () {
+      if (parts.length < 2 || !sep) return;
+      sep.style.display = '';
+      parts.forEach(function (p) { p.style.display = ''; });
+      if (getComputedStyle(sep).display === 'none') return; // phone layout already hides it
+      if (parts[1].getBoundingClientRect().top - parts[0].getBoundingClientRect().top > 2) {
+        sep.style.display = 'none';
+        parts.forEach(function (p) { p.style.display = 'block'; });
+      }
+    };
+    fitKicker();
+    window.addEventListener('resize', fitKicker);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitKicker);
+  }
+
   // If a local image is missing (e.g. previewing outside the repo), fall back to the live copy
   document.querySelectorAll('img[src^="images/"]').forEach(function (img) {
     var live = function () {
