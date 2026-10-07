@@ -75,6 +75,8 @@ body.home main { flex: 1; display: flex; flex-direction: column; min-height: 0; 
 .hero-text { display: flex; flex-direction: column; align-items: center; gap: clamp(10px, 1.6vh, 18px); }
 .hero h1 { font-size: clamp(40px, min(8vw, 9vh), 96px); line-height: 0.95; letter-spacing: -0.01em; }
 .hero .kicker { font-size: clamp(13px, min(1.3vw, 1.8vh), 16px); letter-spacing: 0.18em; line-height: 1.6; }
+.hero .kicker .kp { white-space: nowrap; }
+@media (max-width: 600px) { .hero .kicker .ks { display: none; } .hero .kicker .kp { display: block; } }
 
 /* — biography — */
 .prose p { margin: 0 0 18px; color: var(--ink-2); }
@@ -106,7 +108,6 @@ body.home main { flex: 1; display: flex; flex-direction: column; min-height: 0; 
 .concert-grid figure { align-self: center; max-width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }
 /* the photo is capped by the viewport height so it is seen whole, without scrolling */
 .concert-grid .plate { width: auto; max-width: 100%; max-height: calc(100svh - 300px); min-height: 240px; margin: 0 auto; }
-/* the text column matches the photo: photo height is capped at (100svh - 300px) and its ratio is 3008:2000 */
 .concert-grid .prose { width: 100%; max-width: max(calc((100svh - 312px) * 1.504 + 12px), 361px); margin-inline: auto; }
 
 /* — contact — */
