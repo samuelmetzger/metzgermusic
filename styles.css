@@ -34,7 +34,7 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; margin: 0; line
 .caption { font-size: 13px; color: var(--ink-3); margin-top: 12px; }
 
 /* — header — */
-.nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 40px; padding: 22px clamp(16px, 4vw, 40px); border-bottom: 1px solid var(--rule); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }
+.nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 44px; padding: 22px clamp(16px, 4vw, 40px); border-bottom: 1px solid var(--rule); font-size: clamp(15px, 1.2vw, 17px); letter-spacing: 0.1em; text-transform: uppercase; }
 .nav a { color: var(--ink-3); text-decoration: none; padding: 4px 0; transition: color 0.2s; }
 .nav a:hover { color: var(--ink); }
 .nav a[aria-current="page"] { color: var(--gold-2); }
