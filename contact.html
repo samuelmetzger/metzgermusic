@@ -5,113 +5,72 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Samuel Metzger — MetzgerMusic</title>
 <meta name="description" content="Contact concert organist Samuel Metzger — bookings, recordings, and sheet music orders.">
+<link rel="canonical" href="https://www.metzgermusic.com/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Samuel Metzger — Concert Organist">
+<meta property="og:title" content="Contact | Samuel Metzger — MetzgerMusic">
+<meta property="og:description" content="Contact concert organist Samuel Metzger — bookings, recordings, and sheet music orders.">
+<meta property="og:url" content="https://www.metzgermusic.com/contact.html">
+<meta property="og:image" content="https://www.metzgermusic.com/images/Samuel_8-14-22_retouched.jpeg">
+<meta property="og:image:alt" content="Samuel Metzger seated at the organ console">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1e1c1b">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="nav-wrap">
-    <a class="brand" href="index.html"><svg class="brand-logo" viewBox="0 0 640 150" role="img" aria-label="MetzgerMusic" xmlns="http://www.w3.org/2000/svg"><text x="320" y="92" text-anchor="middle" font-size="92" font-weight="500" letter-spacing="1"><tspan fill="#ffffff">Metzger</tspan><tspan fill="#d9bf8a" font-style="italic">Music</tspan></text><rect x="218" y="138" width="204" height="6" rx="3" fill="#c3a15e"/></svg></a>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="recordings.html">Recordings</a>
-      <a href="sheet-music.html">Sheet Music</a>
-      <a href="organ-concerts.html">Organ Concerts</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </div>
+<header>
+<nav class="nav" aria-label="Site">
+<a href="index.html">Home</a>
+<a href="biography.html">Biography</a>
+<a href="recordings.html">Recordings</a>
+<a href="sheet-music.html">Sheet Music</a>
+<a href="organ-concerts.html">Concerts</a>
+<a href="contact.html" aria-current="page">Contact</a>
+</nav>
 </header>
-
-<div class="page-band">
-  <h1>Contact</h1>
-  <div class="rule"></div>
-</div>
-
 <main>
-  <div class="contact-grid">
-    <div class="contact-card">
-      <h3>Contact Samuel</h3>
-      <p>For bookings, orders, or any other inquiry:</p>
-      <form id="contact-form" action="https://formspree.io/f/meebnvya" method="POST">
-        <label for="cf-name">Name</label>
-        <input id="cf-name" name="name" type="text" required>
-        <label for="cf-email">Your email</label>
-        <input id="cf-email" name="email" type="email" required>
-        <label for="cf-msg">Message</label>
-        <textarea id="cf-msg" name="message" required></textarea>
-        <input type="hidden" name="_subject" value="New inquiry from metzgermusic.com">
-        <button type="submit">Send</button>
-      </form>
-      <p id="cf-status" style="font-size:.9rem;color:#6b7180;margin-top:.75rem;"></p>
-    </div>
-
-    <div>
-      <section>
-        <h2 class="section-title">Recordings — Download</h2>
-        <div class="section-rule"></div>
-        <p>Files are sent as MP3 and full resolution via download link.</p>
-        <ul class="price-list">
-          <li>Joy to the World! <span class="price">$15</span></li>
-          <li>Toccata! <span class="price">$15</span></li>
-          <li>Prayer and Meditation <span class="price">$15</span></li>
-          <li>Be Still My Soul <span class="price">$15</span></li>
-          <li>Majesty and Glory <span class="price">$15</span></li>
-          <li>King of Instruments <span class="price">$15</span></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="section-title">Sheet Music</h2>
-        <div class="section-rule"></div>
-        <p>Samuel has several publications with <a href="https://www.morningstarmusic.com/composers/m/samuel-metzger.html">MorningStar Music</a>.</p>
-        <ul class="price-list">
-          <li>Transcriptions for the Symphonic Organ, Vol. 1 (PDF) <span class="price">$15</span></li>
-          <li>Transcriptions for the Symphonic Organ, Vol. 2 (PDF) <span class="price">$15</span></li>
-        </ul>
-      </section>
-    </div>
-  </div>
+<section class="wrap page-head">
+<h1>Contact</h1>
+<p class="lede">For bookings, orders, or any other inquiry, write to <a href="mailto:samuel@metzgermusic.com">samuel@metzgermusic.com</a> or use the form.</p>
+</section>
+<section class="wrap contact-grid">
+<form id="contact-form" class="reveal" action="https://formspree.io/f/meebnvya" method="POST" novalidate>
+<div class="field"><label for="cf-name">Name</label><input class="input" id="cf-name" name="name" type="text" autocomplete="name" required></div>
+<div class="field"><label for="cf-email">Your email</label><input class="input" id="cf-email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="cf-msg">Message</label><textarea class="input" id="cf-msg" name="message" required></textarea></div>
+<input type="hidden" name="_subject" value="New inquiry from metzgermusic.com">
+<button type="submit" class="btn">Send</button>
+<p id="cf-status" class="status" role="status" aria-live="polite"></p>
+</form>
+<div class="reveal" style="display:flex;flex-direction:column;gap:48px">
+<section class="section">
+<h2>Recordings — Download</h2>
+<p class="note">Files are sent as MP3 and full resolution via download link.</p>
+<!-- TO ADD: one <li> per recording -->
+<ul class="price-list">
+<li><span>Joy to the World!</span><span class="price">$15</span></li>
+<li><span>Toccata!</span><span class="price">$15</span></li>
+<li><span>Prayer and Meditation</span><span class="price">$15</span></li>
+<li><span>Be Still My Soul</span><span class="price">$15</span></li>
+<li><span>Majesty and Glory</span><span class="price">$15</span></li>
+<li><span>King of Instruments</span><span class="price">$15</span></li>
+</ul>
+</section>
+<section class="section">
+<h2>Sheet Music</h2>
+<p class="note">Samuel has several publications with <a href="https://www.morningstarmusic.com/composers/m/samuel-metzger.html">MorningStar Music</a>.</p>
+<ul class="price-list">
+<li><span>Transcriptions for the Symphonic Organ, Vol. 1 (PDF)</span><span class="price">$15</span></li>
+<li><span>Transcriptions for the Symphonic Organ, Vol. 2 (PDF)</span><span class="price">$15</span></li>
+</ul>
+</section>
+</div>
+</section>
 </main>
-
-<footer class="site-footer">
-  <div class="social">
-    <a href="https://www.youtube.com/user/MetzgerMusic">YouTube</a>
-    <a href="https://www.facebook.com/metzgermusic">Facebook</a>
-    <a href="https://twitter.com/smetzger72">Twitter</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <p>&copy; Samuel Metzger &middot; metzgermusic.com</p>
-</footer>
-
-<script>
-var contactForm = document.getElementById('contact-form');
-var statusEl = document.getElementById('cf-status');
-contactForm.addEventListener('submit', async function (e) {
-  e.preventDefault();
-  statusEl.style.color = '#6b7180';
-  statusEl.textContent = 'Sending…';
-  try {
-    var res = await fetch(contactForm.action, {
-      method: 'POST',
-      body: new FormData(contactForm),
-      headers: { 'Accept': 'application/json' }
-    });
-    if (res.ok) {
-      contactForm.reset();
-      statusEl.style.color = '#2e6b2e';
-      statusEl.textContent = 'Thank you — your message has been sent. Samuel will be in touch soon.';
-    } else {
-      statusEl.style.color = '#a33';
-      statusEl.textContent = 'Sorry, something went wrong. Please email samuel@metzgermusic.com directly.';
-    }
-  } catch (err) {
-    statusEl.style.color = '#a33';
-    statusEl.textContent = 'Sorry, something went wrong. Please email samuel@metzgermusic.com directly.';
-  }
-});
-</script>
-
+<script src="site.js"></script>
 </body>
 </html>

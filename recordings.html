@@ -5,103 +5,193 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recordings | Samuel Metzger — MetzgerMusic</title>
 <meta name="description" content="CDs by concert organist Samuel Metzger: Toccata!, Joy to the World!, King of Instruments, Majesty and Glory, Prayer and Meditation, Be Still My Soul.">
+<link rel="canonical" href="https://www.metzgermusic.com/recordings.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Samuel Metzger — Concert Organist">
+<meta property="og:title" content="Recordings | Samuel Metzger — MetzgerMusic">
+<meta property="og:description" content="CDs by concert organist Samuel Metzger: Toccata!, Joy to the World!, King of Instruments, Majesty and Glory, Prayer and Meditation, Be Still My Soul.">
+<meta property="og:url" content="https://www.metzgermusic.com/recordings.html">
+<meta property="og:image" content="https://www.metzgermusic.com/images/Samuel_8-14-22_retouched.jpeg">
+<meta property="og:image:alt" content="Samuel Metzger seated at the organ console">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1e1c1b">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="nav-wrap">
-    <a class="brand" href="index.html"><svg class="brand-logo" viewBox="0 0 640 150" role="img" aria-label="MetzgerMusic" xmlns="http://www.w3.org/2000/svg"><text x="320" y="92" text-anchor="middle" font-size="92" font-weight="500" letter-spacing="1"><tspan fill="#ffffff">Metzger</tspan><tspan fill="#d9bf8a" font-style="italic">Music</tspan></text><rect x="218" y="138" width="204" height="6" rx="3" fill="#c3a15e"/></svg></a>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="recordings.html" class="active">Recordings</a>
-      <a href="sheet-music.html">Sheet Music</a>
-      <a href="organ-concerts.html">Organ Concerts</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<header>
+<nav class="nav" aria-label="Site">
+<a href="index.html">Home</a>
+<a href="biography.html">Biography</a>
+<a href="recordings.html" aria-current="page">Recordings</a>
+<a href="sheet-music.html">Sheet Music</a>
+<a href="organ-concerts.html">Concerts</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
-
-<div class="page-band">
-  <h1>Recordings</h1>
-  <div class="rule"></div>
-</div>
-
 <main>
-  <section>
-    <p>Recordings are available as digital downloads (MP3 and full resolution). To order, please use the <a href="contact.html">contact page</a>.</p>
+<section class="wrap page-head">
+<h1>Recordings</h1>
+<p class="lede">Recordings are available as digital downloads (MP3 and full resolution), $15 each. To order, please use the <a href="contact.html">contact page</a>.</p>
+</section>
+<section class="wrap items">
+<!--
+  TO ADD A RECORDING: copy one <article class="item"> … </article> block below and edit
+  the cover image, title, organ line, track list and price. Each track is one <li>.
+  Delete the <ol class="tracks"> block if there is no track list yet.
+-->
 
-    <div class="album">
-      <img src="images/Toccata-600x596.jpg" alt="Toccata! — CD cover, the Ruffatti Organ of Coral Ridge Presbyterian Church">
-      <div>
-        <h3>Toccata!</h3>
-        <p class="tracks"><em>Toccata and Fugue in D Minor</em> by Johann Sebastian Bach &middot; <em>Festive Trumpet Tune</em> by David German &middot; <em>P&aelig;an, A Song of Triumph (Fanfare)</em> by S. W. Oliphant Chuckerbutty &middot; <em>Carillon de Longpont</em> by Louis Vierne &middot; <em>Toccata in E Minor</em> by Johann Pachelbel &middot; <em>Final from Symphony No. 1</em> by Louis Vierne &middot; <em>Pastorale</em> by Louis Lef&eacute;bure-Wely &middot; <em>Now Thank We All Our God</em> by Johann Sebastian Bach (arr. Virgil Fox) &middot; <em>Fantasy Prelude on &ldquo;Amazing Grace&rdquo;</em> arr. Charles Callahan &middot; <em>Agincourt Hymn</em> by John Dunstable &middot; <em>Toccata in E Minor</em> by Joseph Callaerts &middot; <em>Londonderry Air</em> arr. Noel Rawsthorne &middot; <em>Carillon-Sortie</em> by Henri Mulet &middot; <em>The Liberty Bell March</em> by John Philip Sousa (arr. Samuel Metzger)</p>
-        <p class="meta">The Ruffatti Organ of Coral Ridge Presbyterian Church</p>
-        <a class="btn" href="contact.html">Order — $15</a>
-      </div>
-    </div>
+<!-- ===== Toccata! ===== -->
+<article class="item reveal" id="toccata">
+<img class="plate item-cover" src="images/Toccata-600x596.jpg" alt="Toccata! — CD cover" loading="lazy" width="600" height="600">
+<div class="item-body">
+<h2>Toccata!</h2>
+<p class="meta">The Ruffatti Organ of Coral Ridge Presbyterian Church</p>
+<ol class="tracks">
+<li><i>Toccata and Fugue in D Minor</i> by Johann Sebastian Bach</li>
+<li><i>Festive Trumpet Tune</i> by David German</li>
+<li><i>Pæan, A Song of Triumph (Fanfare)</i> by S. W. Oliphant Chuckerbutty</li>
+<li><i>Carillon de Longpont</i> by Louis Vierne</li>
+<li><i>Toccata in E Minor</i> by Johann Pachelbel</li>
+<li><i>Final</i> from <i>Symphony No. 1</i> by Louis Vierne</li>
+<li><i>Pastorale</i> by Louis Lefébure-Wely</li>
+<li><i>Now Thank We All Our God</i> by Johann Sebastian Bach (arr. Virgil Fox)</li>
+<li><i>Fantasy Prelude on “Amazing Grace”</i> arr. Charles Callahan</li>
+<li><i>Agincourt Hymn</i> by John Dunstable</li>
+<li><i>Toccata in E Minor</i> by Joseph Callaerts</li>
+<li><i>Londonderry Air</i> arr. Noel Rawsthorne</li>
+<li><i>Carillon-Sortie</i> by Henri Mulet</li>
+<li><i>The Liberty Bell March</i> by John Philip Sousa (arr. Samuel Metzger)</li>
+</ol>
+<div class="actions"><span class="price">$15</span><a class="btn" href="contact.html">Order this recording</a></div>
+</div>
+</article>
 
-    <div class="album">
-      <img src="images/JTTW.jpg" alt="Joy to the World! — CD cover, the Sanctuary and Chapel Organs of Coral Ridge Presbyterian Church">
-      <div>
-        <h3>Joy to the World!</h3>
-        <p class="tracks"><em>Joy to the World!</em> arr. Samuel Metzger &middot; <em>O Holy Night!</em> by Adolphe Adam (arr. Metzger) &middot; <em>Prelude on &ldquo;What Child Is This&rdquo;</em> by Richard Purvis &middot; <em>From Heaven Came the Angels Bright</em> by Johann Sebastian Bach &middot; <em>Hark! the Herald Angels Sing</em> arr. David Willcocks &middot; <em>No&euml;l</em> by Louis-Claude Daquin &middot; <em>How Lovely Shines the Morning Star!</em> by Paul Manz &middot; <em>No&euml;l Suisse</em> by Louis-Claude Daquin &middot; <em>From Heaven High I Come to You</em> by Johann Pachelbel &middot; <em>Hallelujah Chorus</em> by Georg Friedrich H&auml;ndel (arr. Metzger) &middot; <em>Lo, How a Rose E&rsquo;er Blooming</em> by Johannes Brahms &middot; <em>Come, Thou Long-Expected Jesus</em> arr. Samuel Metzger &middot; <em>O Come, All Ye Faithful</em> arr. David Willcocks &middot; <em>It Came upon the Midnight Clear</em> arr. David Cherwien &middot; <em>Lord of the Dance</em> arr. Noel Rawsthorne &middot; <em>Angels, from the Realms of Glory</em> arr. Samuel Metzger &middot; <em>This Is the Truth Sent from Above</em> arr. Noel Rawsthorne &middot; <em>Shepherds Lullaby (Silent Night)</em> by Charles Callahan &middot; <em>Festive Flourish on &ldquo;Joy to the World!&rdquo;</em> by Michael Dell</p>
-        <p class="meta">The Sanctuary and Chapel Organs of Coral Ridge Presbyterian Church</p>
-        <a class="btn" href="contact.html">Order — $15</a>
-      </div>
-    </div>
+<!-- ===== Joy to the World! ===== -->
+<article class="item reveal" id="joy-to-the-world">
+<img class="plate item-cover" src="images/JTTW.jpg" alt="Joy to the World! — CD cover" loading="lazy" width="600" height="600">
+<div class="item-body">
+<h2>Joy to the World!</h2>
+<p class="meta">The Sanctuary and Chapel Organs of Coral Ridge Presbyterian Church</p>
+<ol class="tracks">
+<li><i>Joy to the World!</i> arr. Samuel Metzger</li>
+<li><i>O Holy Night!</i> by Adolphe Adam (arr. Metzger)</li>
+<li><i>Prelude on “What Child Is This”</i> by Richard Purvis</li>
+<li><i>From Heaven Came the Angels Bright</i> by Johann Sebastian Bach</li>
+<li><i>Hark! the Herald Angels Sing</i> arr. David Willcocks</li>
+<li><i>Noël</i> by Louis-Claude Daquin</li>
+<li><i>How Lovely Shines the Morning Star!</i> by Paul Manz</li>
+<li><i>Noël Suisse</i> by Louis-Claude Daquin</li>
+<li><i>From Heaven High I Come to You</i> by Johann Pachelbel</li>
+<li><i>Hallelujah Chorus</i> by Georg Friedrich Händel (arr. Metzger)</li>
+<li><i>Lo, How a Rose E’er Blooming</i> by Johannes Brahms</li>
+<li><i>Come, Thou Long-Expected Jesus</i> arr. Samuel Metzger</li>
+<li><i>O Come, All Ye Faithful</i> arr. David Willcocks</li>
+<li><i>It Came upon the Midnight Clear</i> arr. David Cherwien</li>
+<li><i>Lord of the Dance</i> arr. Noel Rawsthorne</li>
+<li><i>Angels, from the Realms of Glory</i> arr. Samuel Metzger</li>
+<li><i>This Is the Truth Sent from Above</i> arr. Noel Rawsthorne</li>
+<li><i>Shepherds Lullaby (Silent Night)</i> by Charles Callahan</li>
+<li><i>Festive Flourish on “Joy to the World!”</i> by Michael Dell</li>
+</ol>
+<div class="actions"><span class="price">$15</span><a class="btn" href="contact.html">Order this recording</a></div>
+</div>
+</article>
 
-    <div class="album">
-      <img src="images/KOI.jpg" alt="King of Instruments — CD cover, the Ruffatti Organ of Coral Ridge Presbyterian Church">
-      <div>
-        <h3>King of Instruments</h3>
-        <p class="tracks"><em>Toccata on &ldquo;Rejoice, Ye Pure in Heart&rdquo;</em> by Albert L. Travis &middot; <em>In Thee is Gladness</em> by Michael Burkhardt &middot; <em>Amazing Grace</em> by Albert L. Travis &middot; <em>Variations on &ldquo;All Creatures of Our God and King&rdquo;</em> by Denis B&eacute;dard &middot; <em>The Aquarium &amp; The Swan</em> from <em>Carnival of the Animals</em> by Camille Saint-Sa&euml;ns (arr. Metzger) &middot; <em>Carillon de Westminster</em>, op. 54 by Louis Vierne &middot; <em>Trio Sonata in E-flat Major</em>, BWV 525, Johann Sebastian Bach &middot; <em>Toccata on &ldquo;Thou Art the Rock&rdquo;</em> by Henri Mulet &middot; <em>Prelude and Fugue in G Major</em>, BWV 541, Johann Sebastian Bach &middot; <em>Finlandia</em> by Jean Sibelius (arr. Herbert Austin Fricker) &middot; <em>Toccata</em> (from <em>Symphony No. 5</em>) by Charles-Marie Widor</p>
-        <p class="meta">The Ruffatti Organ of Coral Ridge Presbyterian Church</p>
-        <a class="btn" href="contact.html">Order — $15</a>
-      </div>
-    </div>
+<!-- ===== King of Instruments ===== -->
+<article class="item reveal" id="king-of-instruments">
+<img class="plate item-cover" src="images/KOI.jpg" alt="King of Instruments — CD cover" loading="lazy" width="600" height="600">
+<div class="item-body">
+<h2>King of Instruments</h2>
+<p class="meta">The Ruffatti Organ of Coral Ridge Presbyterian Church</p>
+<ol class="tracks">
+<li><i>Toccata on “Rejoice, Ye Pure in Heart”</i> by Albert L. Travis</li>
+<li><i>In Thee is Gladness</i> by Michael Burkhardt</li>
+<li><i>Amazing Grace</i> by Albert L. Travis</li>
+<li><i>Variations on “All Creatures of Our God and King”</i> by Denis Bédard</li>
+<li><i>The Aquarium</i> &amp; <i>The Swan</i> from <i>Carnival of the Animals</i> by Camille Saint-Saëns (arr. Metzger)</li>
+<li><i>Carillon de Westminster</i>, op. 54 by Louis Vierne</li>
+<li><i>Trio Sonata in E-flat Major</i>, BWV 525, Johann Sebastian Bach</li>
+<li><i>Toccata on “Thou Art the Rock”</i> by Henri Mulet</li>
+<li><i>Prelude and Fugue in G Major</i>, BWV 541, Johann Sebastian Bach</li>
+<li><i>Finlandia</i> by Jean Sibelius (arr. Herbert Austin Fricker)</li>
+<li><i>Toccata</i> from <i>Symphony No. 5</i> by Charles-Marie Widor</li>
+</ol>
+<div class="actions"><span class="price">$15</span><a class="btn" href="contact.html">Order this recording</a></div>
+</div>
+</article>
 
-    <div class="album">
-      <img src="images/MAG.jpg" alt="Majesty and Glory — CD cover, the Ruffatti Organ of Coral Ridge Presbyterian Church">
-      <div>
-        <h3>Majesty and Glory</h3>
-        <p class="tracks"><em>The Majesty and Glory of Your Name</em> by Tom Fettke* &middot; <em>O Worship the King</em> by Samuel Metzger &middot; <em>At the Name of Jesus</em> by Cindy Berry* &middot; <em>Lead On, O King Eternal</em> by Metzger &middot; <em>Jesu, Joy of Man&rsquo;s Desiring</em> by J.&thinsp;S. Bach (arr. Metzger) &middot; <em>Crown Him with Many Crowns</em> by Metzger &middot; <em>Be Still My Soul</em> by Mack Wilberg* &middot; <em>I Sing the Mighty Power of God</em> by Metzger &middot; <em>Amazing Grace</em> by Frederick Swann &middot; <em>When I Survey the Wondrous Cross</em> by Metzger &middot; <em>Come, Thou Fount of Every Blessing</em> by Mack Wilberg* &middot; <em>Come, Christians Join to Sing</em> by Metzger &middot; <em>Holy, Holy, Holy</em> by Metzger &middot; <em>Fairest Lord Jesus</em> by Metzger &middot; <em>All Creatures of Our God and King</em> by Metzger &middot; <em>Great is Thy Faithfulness</em> by Dan Miller &middot; <em>How Great Thou Art</em> by David T. Clydesdale</p>
-        <p class="meta">The Ruffatti Organ of Coral Ridge Presbyterian Church</p>
-        <a class="btn" href="contact.html">Order — $15</a>
-      </div>
-    </div>
+<!-- ===== Majesty and Glory ===== -->
+<article class="item reveal" id="majesty-and-glory">
+<img class="plate item-cover" src="images/MAG.jpg" alt="Majesty and Glory — CD cover" loading="lazy" width="600" height="600">
+<div class="item-body">
+<h2>Majesty and Glory</h2>
+<p class="meta">The Ruffatti Organ of Coral Ridge Presbyterian Church</p>
+<ol class="tracks">
+<li><i>The Majesty and Glory of Your Name</i> by Tom Fettke*</li>
+<li><i>O Worship the King</i> by Samuel Metzger</li>
+<li><i>At the Name of Jesus</i> by Cindy Berry*</li>
+<li><i>Lead On, O King Eternal</i> by Metzger</li>
+<li><i>Jesu, Joy of Man’s Desiring</i> by J. S. Bach (arr. Metzger)</li>
+<li><i>Crown Him with Many Crowns</i> by Metzger</li>
+<li><i>Be Still My Soul</i> by Mack Wilberg*</li>
+<li><i>I Sing the Mighty Power of God</i> by Metzger</li>
+<li><i>Amazing Grace</i> by Frederick Swann</li>
+<li><i>When I Survey the Wondrous Cross</i> by Metzger</li>
+<li><i>Come, Thou Fount of Every Blessing</i> by Mack Wilberg*</li>
+<li><i>Come, Christians Join to Sing</i> by Metzger</li>
+<li><i>Holy, Holy, Holy</i> by Metzger</li>
+<li><i>Fairest Lord Jesus</i> by Metzger</li>
+<li><i>All Creatures of Our God and King</i> by Metzger</li>
+<li><i>Great is Thy Faithfulness</i> by Dan Miller</li>
+<li><i>How Great Thou Art</i> by David T. Clydesdale</li>
+</ol>
+<div class="actions"><span class="price">$15</span><a class="btn" href="contact.html">Order this recording</a></div>
+</div>
+</article>
 
-    <div class="album">
-      <img src="images/PrayerandMeditation-600x594.jpg" alt="Prayer and Meditation — CD cover, the Ruffatti Organ of Coral Ridge Presbyterian Church">
-      <div>
-        <h3>Prayer and Meditation</h3>
-        <p class="tracks"><em>My Shepherd Will Supply My Need</em> by Albin C. Whitworth &middot; <em>It Is Well with My Soul</em> by John Ness Beck (arr. Janet Linker) &middot; <em>Morning Has Broken</em> by Charles Callahan &middot; <em>Sicilienne</em> by Maria Theresia von Paradis &middot; <em>I Need Thee Every Hour</em> arr. Albin C. Whitworth &middot; <em>O Sacred Head, Now Wounded</em> by Johann Sebastian Bach &middot; <em>Lamento</em> (from <em>Suite</em>) by Denis B&eacute;dard &middot; <em>Largo</em> (from <em>Concerto in D Minor</em>) by Antonio Vivaldi (arr. J.&thinsp;S. Bach) &middot; <em>There Is a Fountain</em> arr. Gilbert M. Martin &middot; <em>God Will Take Care of You</em> arr. Albin C. Whitworth &middot; <em>Prayer</em> by Noel Rawsthorne &middot; <em>O Love That Will Not Let Me Go</em> arr. Albin C. Whitworth &middot; <em>Arabesque</em> (from <em>Twenty-Four Pieces in Free Style</em>) by Louis Vierne &middot; <em>Abide with Me</em> arr. Albin C. Whitworth</p>
-        <a class="btn" href="contact.html">Order — $15</a>
-      </div>
-    </div>
+<!-- ===== Prayer and Meditation ===== -->
+<article class="item reveal" id="prayer-and-meditation">
+<img class="plate item-cover" src="images/PrayerandMeditation-600x594.jpg" alt="Prayer and Meditation — CD cover" loading="lazy" width="600" height="600">
+<div class="item-body">
+<h2>Prayer and Meditation</h2>
+<p class="meta">The Ruffatti Organ of Coral Ridge Presbyterian Church</p>
+<ol class="tracks">
+<li><i>My Shepherd Will Supply My Need</i> by Albin C. Whitworth</li>
+<li><i>It Is Well with My Soul</i> by John Ness Beck (arr. Janet Linker)</li>
+<li><i>Morning Has Broken</i> by Charles Callahan</li>
+<li><i>Sicilienne</i> by Maria Theresia von Paradis</li>
+<li><i>I Need Thee Every Hour</i> arr. Albin C. Whitworth</li>
+<li><i>O Sacred Head, Now Wounded</i> by Johann Sebastian Bach</li>
+<li><i>Lamento</i> from <i>Suite</i> by Denis Bédard</li>
+<li><i>Largo</i> from <i>Concerto in D Minor</i> by Antonio Vivaldi (arr. J. S. Bach)</li>
+<li><i>There Is a Fountain</i> arr. Gilbert M. Martin</li>
+<li><i>God Will Take Care of You</i> arr. Albin C. Whitworth</li>
+<li><i>Prayer</i> by Noel Rawsthorne</li>
+<li><i>O Love That Will Not Let Me Go</i> arr. Albin C. Whitworth</li>
+<li><i>Arabesque</i> from <i>Twenty-Four Pieces in Free Style</i> by Louis Vierne</li>
+<li><i>Abide with Me</i> arr. Albin C. Whitworth</li>
+</ol>
+<div class="actions"><span class="price">$15</span><a class="btn" href="contact.html">Order this recording</a></div>
+</div>
+</article>
 
-    <div class="album">
-      <img src="images/BSMS.jpg" alt="Be Still My Soul — CD cover, the Ruffatti Organ of Coral Ridge Presbyterian Church">
-      <div>
-        <h3>Be Still My Soul</h3>
-        <p class="meta">The Ruffatti Organ of Coral Ridge Presbyterian Church</p>
-        <a class="btn" href="contact.html">Order — $15</a>
-      </div>
-    </div>
-  </section>
+<!-- ===== Be Still My Soul ===== -->
+<article class="item reveal" id="be-still-my-soul">
+<img class="plate item-cover" src="images/BSMS.jpg" alt="Be Still My Soul — CD cover" loading="lazy" width="600" height="600">
+<div class="item-body">
+<h2>Be Still My Soul</h2>
+<p class="meta">The Ruffatti Organ of Coral Ridge Presbyterian Church</p>
+
+<div class="actions"><span class="price">$15</span><a class="btn" href="contact.html">Order this recording</a></div>
+</div>
+</article>
+
+</section>
 </main>
-
-<footer class="site-footer">
-  <div class="social">
-    <a href="https://www.youtube.com/user/MetzgerMusic">YouTube</a>
-    <a href="https://www.facebook.com/metzgermusic">Facebook</a>
-    <a href="https://twitter.com/smetzger72">Twitter</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <p>&copy; Samuel Metzger &middot; metzgermusic.com</p>
-</footer>
-
+<script src="site.js"></script>
 </body>
 </html>
