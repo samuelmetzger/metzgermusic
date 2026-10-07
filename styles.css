@@ -106,7 +106,8 @@ body.home main { flex: 1; display: flex; flex-direction: column; min-height: 0; 
 .concert-grid figure { align-self: center; max-width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }
 /* the photo is capped by the viewport height so it is seen whole, without scrolling */
 .concert-grid .plate { width: auto; max-width: 100%; max-height: calc(100svh - 300px); min-height: 240px; margin: 0 auto; }
-.concert-grid .prose { max-width: none; }
+/* the text column matches the photo: photo height is capped at (100svh - 300px) and its ratio is 3008:2000 */
+.concert-grid .prose { width: 100%; max-width: max(calc((100svh - 312px) * 1.504 + 12px), 361px); margin-inline: auto; }
 
 /* — contact — */
 .contact-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 48px 72px; align-items: start; padding-bottom: clamp(48px, 6vw, 80px); }
