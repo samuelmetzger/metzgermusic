@@ -56,8 +56,13 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; margin: 0; line
 .page-head .lede { font-size: 17px; max-width: 64ch; color: var(--ink-2); margin: 0; }
 
 /* — home hero: the Fisk façade — */
-.hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding-block: clamp(40px, 6vw, 64px) clamp(48px, 6vw, 72px); }
-.organ { position: relative; width: min(440px, 72vw); aspect-ratio: 1203 / 2033; }
+/* The whole hero fits one screen: the organ's height is derived from the viewport minus the
+   header and the text block, and its width follows from the drawing's ratio. */
+body.home { min-height: 100svh; display: flex; flex-direction: column; }
+body.home main { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.hero { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 0; padding-block: clamp(16px, 3vh, 40px) clamp(20px, 4vh, 48px); gap: clamp(16px, 3vh, 36px); }
+.organ { position: relative; flex: 1 1 0; min-height: 0; width: auto; max-width: 72vw; aspect-ratio: 1203 / 2033; }
+.hero-text { flex: none; }
 .organ-case { position: absolute; inset: 0; }.organ-ink, .organ-glint, .rose-ink { position: absolute; -webkit-mask-image: url(images/fisk-organ.png); mask-image: url(images/fisk-organ.png); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
 .organ-ink { inset: 0; background: var(--gold); }
 /* the reveal (C — candlelight): a soft glow climbs the pipes from the floor. The second mask
@@ -67,9 +72,9 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; margin: 0; line
 .rose { position: absolute; left: 35.245%; top: 0; width: 30.756%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: var(--bg); }
 .rose-spin { position: absolute; inset: 0; }
 .rose-ink { left: -114.595%; top: 0.135%; width: 325.135%; height: 549.459%; background: var(--gold-2); }
-.hero-text { display: flex; flex-direction: column; align-items: center; gap: 22px; padding-top: 48px; }
-.hero h1 { font-size: clamp(52px, 9vw, 112px); line-height: 0.95; letter-spacing: -0.01em; }
-.hero .kicker { font-size: clamp(15px, 1.8vw, 20px); line-height: 1.8; }
+.hero-text { display: flex; flex-direction: column; align-items: center; gap: clamp(10px, 1.6vh, 18px); }
+.hero h1 { font-size: clamp(40px, min(8vw, 9vh), 96px); line-height: 0.95; letter-spacing: -0.01em; }
+.hero .kicker { font-size: clamp(14px, min(1.8vw, 2.2vh), 20px); line-height: 1.6; }
 
 /* — biography — */
 .prose p { margin: 0 0 18px; text-align: justify; hyphens: auto; color: var(--ink-2); }
