@@ -53,9 +53,9 @@
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
         .then(function (res) {
           if (res.ok) { form.reset(); status.setAttribute('data-state', 'ok'); status.textContent = 'Thank you — your message has been sent. Samuel will be in touch soon.'; }
-          else { status.textContent = 'Sorry, something went wrong. Please email samuel@metzgermusic.com directly.'; }
+          else { status.textContent = 'Sorry, something went wrong. Please try again in a few minutes.'; }
         })
-        .catch(function () { status.textContent = 'Sorry, something went wrong. Please email samuel@metzgermusic.com directly.'; });
+        .catch(function () { status.textContent = 'Sorry, something went wrong. Please try again in a few minutes.'; });
     });
   }
 })();
