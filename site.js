@@ -11,7 +11,6 @@
     revealed.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // Home tagline: hide the middle dot whenever the line wraps, so no line starts or ends with "·"
   var kicker = document.querySelector('.hero .kicker');
   if (kicker) {
     var parts = kicker.querySelectorAll('.kp');
@@ -20,7 +19,7 @@
       if (parts.length < 2 || !sep) return;
       sep.style.display = '';
       parts.forEach(function (p) { p.style.display = ''; });
-      if (getComputedStyle(sep).display === 'none') return; // phone layout already hides it
+      if (getComputedStyle(sep).display === 'none') return;
       if (parts[1].getBoundingClientRect().top - parts[0].getBoundingClientRect().top > 2) {
         sep.style.display = 'none';
         parts.forEach(function (p) { p.style.display = 'block'; });

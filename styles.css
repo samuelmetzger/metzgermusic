@@ -135,6 +135,9 @@ textarea.input { min-height: 150px; resize: vertical; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+/* the glow keeps climbing past the top pipes: rule first, then the menu */
+.js .home .nav { -webkit-mask-image: linear-gradient(to top, #000 33.4%, transparent 66.6%); mask-image: linear-gradient(to top, #000 33.4%, transparent 66.6%); -webkit-mask-size: 100% 300%; mask-size: 100% 300%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: 0 0%; mask-position: 0 0%; animation: navrise 1.6s ease-out 4.3s forwards; }
+@keyframes navrise { to { -webkit-mask-position: 0 100%; mask-position: 0 100%; } }
 .js .organ-glint { animation: sweep 9s ease-in-out 5.2s infinite; }
 .js .rose { opacity: 0; animation: fadein 1.4s ease 3.8s forwards; }
 .js .rose-spin { animation: spin 240s linear 3.8s infinite; }
@@ -147,6 +150,7 @@ textarea.input { min-height: 150px; resize: vertical; }
 .js .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .js .organ-ink { animation: none; -webkit-mask-position: 0 0, 0 0; mask-position: 0 0, 0 0; }
+  .js .home .nav { animation: none; -webkit-mask-image: none; mask-image: none; }
   .js .organ-glint, .js .rose, .js .rose-spin, .js .hero-text > * { animation: none; opacity: 1; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
 }
