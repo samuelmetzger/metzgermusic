@@ -43,6 +43,11 @@
 <div class="field"><label for="cf-name">Name</label><input class="input" id="cf-name" name="name" type="text" autocomplete="name" required></div>
 <div class="field"><label for="cf-email">Your email</label><input class="input" id="cf-email" name="email" type="email" autocomplete="email" required></div>
 <div class="field"><label for="cf-msg">Message</label><textarea class="input" id="cf-msg" name="message" required></textarea></div>
+<div class="field"><label for="cf-phone">Mobile number (optional)</label><input class="input" id="cf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"></div>
+<div style="display:flex;align-items:flex-start;gap:10px;margin:-6px 0 18px">
+<input type="checkbox" id="cf-sms-consent" name="sms_consent" value="yes" style="flex:none;margin:4px 0 0;accent-color:var(--gold-2)">
+<label for="cf-sms-consent" style="font-size:13px;line-height:1.6;color:var(--ink-3)">Yes, Samuel Metzger may text me at this number about church music scheduling, rehearsals, and service details. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See the <a href="#sms-terms">Text Messaging Terms</a> and <a href="#privacy">Privacy Policy</a>.</label>
+</div>
 <input type="hidden" name="_subject" value="New inquiry from metzgermusic.com">
 <button type="submit" class="btn">Send</button>
 <p id="cf-status" class="status" role="status" aria-live="polite"></p>
@@ -77,16 +82,21 @@
 <p class="note">Samuel Metzger sends personal text messages from (629) 316-2264 to people who have given him their mobile number.</p>
 <p class="note">What I collect: your name, your mobile number, and the messages we exchange.</p>
 <p class="note">Sharing: I never sell, rent, or share your mobile number or opt-in information with anyone, including third parties or affiliates, for marketing purposes.</p>
+<p class="note">Text messaging originator opt-in data and consent will not be shared with any third parties.</p>
 <p class="note">Opting out: reply STOP at any time and you won’t get any more texts. Reply HELP for help.</p>
 </section>
 <section class="section" id="sms-terms" style="scroll-margin-top:24px">
 <h2>Text Messaging Terms</h2>
-<p class="note">Program: personal text messages from Samuel Metzger (Nashville, TN).</p>
-<p class="note">Frequency: varies.</p>
-<p class="note">Cost: message and data rates may apply.</p>
-<p class="note">Opt out: reply STOP at any time. You’ll get one confirmation text, and then no more messages.</p>
-<p class="note">Help: reply HELP, or email <a href="mailto:samuel@metzgermusic.com">samuel@metzgermusic.com</a>.</p>
+<p class="note">Program name: Samuel Metzger Music Texts.</p>
+<p class="note">Description: Texts from Samuel Metzger, organist and church musician in Nashville, TN, to musicians, colleagues, and church members about scheduling (such as playing the Preparation for Worship), rehearsals, and service details.</p>
+<p class="note">How you join: by checking the box on this page, or by giving Samuel your number in person or by email and saying yes when he asks if he may text you.</p>
+<p class="note">Message frequency varies.</p>
+<p class="note">Message and data rates may apply.</p>
+<p class="note">Reply STOP to opt out at any time. You’ll get one confirmation text and no more messages.</p>
+<p class="note">Reply HELP or email <a href="mailto:samuel@metzgermusic.com">samuel@metzgermusic.com</a> for help.</p>
 <p class="note">Carriers are not liable for delayed or undelivered messages.</p>
+<p class="note">Consent to receive texts is not a condition of any purchase or service.</p>
+<p class="note">See the <a href="#privacy">Privacy Policy</a>.</p>
 </section>
 </section>
 </main>
